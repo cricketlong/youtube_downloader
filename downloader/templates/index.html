@@ -1,0 +1,11 @@
+<html>
+<body>
+<form action="/downloader/" method="post" id="url">
+{% csrf_token %}
+<input type="text" name="download_url" value="{{ download_url }}"/>
+</form>
+<button type="submit" form="url" value="download">download</button>
+<br>
+{{ output }}
+</body>
+</html>
