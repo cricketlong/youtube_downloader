@@ -2,9 +2,29 @@
 <body>
 <form action="" method="post" id="url">
 {% csrf_token %}
-<input type="text" name="download_url" value="{{ download_url }}"/>
+<br><br>
+<table style="width:100%;border-spacing:8px">
+<tr>
+    <td style="width:10%" />
+    <td style="text-align:right"><h3 style="margin-bottom: 0px">file name:</h3></td>
+    <td style="width:60%">
+        <input style="font-size:20px;width:50%" type="text" name="filename" value="{{ download_url }}"/>
+        <button type="submit" form="url" value="download">download</button>
+    </td>
+    <td style="width:10%" />
+</tr>
+<tr style="padding-top:10px">
+    <td style="width:10%" />
+    <td style="text-align:right"><h3 style="margin-bottom: 0px">Video URL: </h3></td>
+    <td>
+        <input style="font-size:20px;width:60%" type="text" name="download_url" value="{{ download_url }}"/>
+    </td>
+    <td style="width:10%" />
+</tr>
+</table>
+</h3>
+</tr>
 </form>
-<button type="submit" form="url" value="download">download</button>
 <br>
 {{ output }}
 </body>

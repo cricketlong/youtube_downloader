@@ -25,7 +25,7 @@ SECRET_KEY = 'mx=4-ammnmz%1@!tx831=h=zu_mjg0^lc@0i^bk=7rrc@0j*v-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["juhu.cloud"]
+ALLOWED_HOSTS = ["localhost"]
 
 
 # Application definition
