@@ -15,7 +15,7 @@ def index(request):
         command = '/usr/bin/youtube2mp3 "{0}" "{1}"'.format(data["download_url"], file_path)
         subprocess.call(command, shell=True)
 
-        with open(file_path, "rb") as f:
+        with open(file_path, "w+") as f:
             response = HttpResponse(f, content_type='application/force-download')
             response['Content-Length'] = len(response.content)
             response['Content-Disposition'] = 'attachment; filename=1.mp3'
