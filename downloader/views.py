@@ -22,6 +22,7 @@ def index(request):
             custom_filename = "1"
             if len(data['filename']) > 0:
                 custom_filename = data['filename']
-            response['Content-Disposition'] = "attachment; filename={0}.mp3".format(custom_filename)
+            print(custom_filename)
+            response['Content-Disposition'] = "attachment; filename=1.mp3".format(custom_filename)
 
     return response
